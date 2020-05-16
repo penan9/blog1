@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <style>
+        h1 { color: lightyellow; }
+    </style>
+    <h1>Products</h1>
+    <div class="row" >
+    
+        {% for product in products%}
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{product.image_url}}" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{product.name}}</h5>
+                        <p class="card-text">${{product.price}}</p>
+                        <a href="../articles/" class="btn btn-primary">Procedure</a>
+                    </div>
+                </div>
+            </div>
+        {%endfor%}  
+    </div>
+{% endblock %}
