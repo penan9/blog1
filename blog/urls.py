@@ -22,12 +22,16 @@ from . import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^articles/', include('articles.urls')),
-    url(r'^about/$', views.about),
+    url(r'^procedures/', include('procedures.urls')),
+    url(r'^about.html$', views.about),
     url(r'^$', views.homepage),
+    url(r'^read_more.html$', views.read_more),
     url(r'^products/', include('products.urls')),
     url(r'^products/new', include('products.urls')),
     url(r'^products/sales', include('products.urls')),
     url(r'^products/details', include('products.urls')),
+    url(r'^contact_form/', include('contact_form.urls')),
+    url(r'^sendemail/', include('sendemail.urls')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
