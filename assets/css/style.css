@@ -60,8 +60,16 @@ body {
 }
 
 .row {
-    width: 250px;
+    width: 260px;
     text-align: left;
+    height: 400px;
+    overflow-y: overlay;
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.row p {
+    margin-bottom: 0;
 }
 
 .row > label {
@@ -93,6 +101,10 @@ textarea {
     border-color: grey;
     width: 260px;
     font-size: 14px;
+}
+
+card {
+    width: 50rem;
 }
 
 .form-actions {
