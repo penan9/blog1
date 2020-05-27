@@ -3,10 +3,6 @@ from os.path import abspath, isfile
 from django.http import HttpResponse
 from django.shortcuts import render
 
-def homepage(request):
-    # return HttpResponse('homepage')
-    return render(request, 'homepage.html')
-
 
 def read_more(request):
     return render(request, 'read_more.html')

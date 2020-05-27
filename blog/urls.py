@@ -18,13 +18,16 @@ from django.contrib import admin
 from django.conf.urls import url, include
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^articles/', include('articles.urls')),
     url(r'^procedures/', include('procedures.urls')),
     url(r'^about.html$', views.about),
-    url(r'^$', views.homepage),
+    url(r'^home/', include('home.urls')),
+    url(r'^', include('home.urls')),
     url(r'^read_more.html$', views.read_more),
     url(r'^products/', include('products.urls')),
     url(r'^products/new', include('products.urls')),
@@ -32,6 +35,6 @@ urlpatterns = [
     url(r'^products/details', include('products.urls')),
     url(r'^contact_form/', include('contact_form.urls')),
     url(r'^sendemail/', include('sendemail.urls')),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += staticfiles_urlpatterns()
