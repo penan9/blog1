@@ -152,7 +152,9 @@ and (orientation : portrait) { /* STYLES GO HERE */
 visibility: hidden;
 }
     body {
-  background: url('https://images.pexels.com/photos/533923/pexels-photo-533923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center/cover;
+/*  background: url('https://images.pexels.com/photos/533923/pexels-photo-533923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center/cover;
+*/ 
+background: url('/static/images/home/jp54.png');
 }
 }
 
