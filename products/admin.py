@@ -11,7 +11,7 @@ class ProductAdmin(admin.ModelAdmin):
 
 
 class FuelAdmin(admin.ModelAdmin):
-    list_display = ('name', 'stock', 'price', 'price2', 'unit')
+    list_display = ('name', 'stock', 'price', 'price2', 'unit', 'photo')
 
 
 # Register your models here.

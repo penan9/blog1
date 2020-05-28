@@ -9,7 +9,10 @@ def index(request):
     home1 = Home()
     homepage = "welcome: "
     try:
-        home1.filename =random.choice(home) 
+        myhomes = []
+        for myhome in home:
+            myhomes.append(myhome.filename) 
+        home1.filename =random.choice(myhomes) 
     except IndexError:
         homepage += "Error: IndexError" 
         print (homepage)

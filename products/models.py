@@ -17,6 +17,7 @@ class Fuel(models.Model):
 	stock = models.IntegerField()
 	unit = models.CharField(max_length=10, default='brls')
 	image_url = models.CharField(max_length=2083)
+	photo = models.ImageField(upload_to='images/products',null=True)
 
 
 class Offer(models.Model):
